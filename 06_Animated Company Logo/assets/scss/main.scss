@@ -1,0 +1,48 @@
+@use "./helper/variables" as *;
+@use "./helper/animations" as *;
+@use "./helper/placeholders" as *;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  padding-top: 5%;
+  background-color: #f1f2f3;
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  .element {
+    position: absolute;
+    top: 15%;
+    left: 46%;
+    animation-name: appear;
+    animation-duration: 4s;
+    circle {
+      opacity: 1;
+    }
+  }
+  .slide-left {
+    left: 50%;
+    @extend %slide-left;
+
+    #sass-logo {
+      position: absolute;
+      width: 100px;
+      display: block;
+      fill: white;
+    }
+    h3 {
+      color: $blue;
+      font-family: $slogan-font;
+      font-weight: 600;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: $slogan-spacing;
+      position: relative;
+      line-height: 1.4;
+      padding-top: 30%;
+      left: -6.3%;
+    }
+  }
+}
