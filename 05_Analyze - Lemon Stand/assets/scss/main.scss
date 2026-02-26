@@ -7,11 +7,7 @@
 
 h1 {
   font-family: Roboto, sans-serif;
-  @include center;
-}
-
-.absolute{
-  position: absolute;
+  @extend %center;
 }
 
 .banner {
@@ -33,7 +29,7 @@ h1 {
     @extend %absolute;
 
     span {
-      @include center;
+      @extend %center;
       width: 40%;
       left: 30%;
       @extend %absolute;
