@@ -1,3 +1,9 @@
+@mixin hover-color($color) {
+  &:hover {
+    color: $color;
+  }
+}
+
 $stripe-properties:
   to bottom,
   15%,
@@ -84,6 +90,7 @@ $stripe-properties:
   font-size: 20px;
 
   .word {
+    @include hover-color(red);
     display: block;
     text-align: center;
     position: relative;
@@ -97,7 +104,7 @@ $stripe-properties:
   line-height: 1.6;
   @include transform(rotatey(-180deg));
   .definition {
-    @include stripes($stripe-properties);
+    @include stripes($stripe-properties...);
     width: 100%;
     height: 100%;
 
